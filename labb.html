@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<p>Click the button to calculate the arithmetic mean of the numerical elements in the given array.</p>
+
+<button onclick="calculateMean()">Calculate Mean</button>
+
+<p id="demo"></p>
+
+<script>
+
+function calculateMean() {
+  var arr = [1, "two", 3, "four", 5];
+  var sum = 0;
+  var count = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      sum += arr[i];
+      count++;
+    }
+  }
+
+  var mean = sum / count;
+  document.getElementById("demo").innerHTML = "The arithmetic mean of the numerical elements is " + mean;
+}
+
+</script>
+
+</body>
